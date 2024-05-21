@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.skill-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between skill bars */
+  width: 100%;
+}
+
+.skill-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.outer {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4caf50 var(--percentage),
+    #dcdcdc 0
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.inner {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percentage {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.language-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .outer {
+    width: 80px;
+    height: 80px;
+  }
+
+  .inner {
+    width: 90px;
+    height: 90px;
+  }
+
+  .percentage {
+    font-size: 1rem;
+  }
+
+  .language-name {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Adjust to min-height to ensure it works well on all screens */
+  font-family: Arial, sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.bar {
+  width: 170%;
+  max-width: 500px; /* Set a maximum width */
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start; /* Align items to the start (left) of the bar */
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  
+  border-radius: 10px;
+  padding-left: 10px; /* Add padding to create space between icon and bar */
+  transition: transform 0.3s ease-in-out;
+}
+
+.bar:hover {
+  transform: scale(1.05);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-right: 10px; /* Add margin to create space between icon and text */
+}
+
+span {
+  font-size: 1rem;
+}
+
+/* Media query for smaller screens to stack bars vertically */
+@media (max-width: 600px) {
+  .bar {
+    width: 110%; /* Ensure it takes full width on smaller screens */
+    max-width: none; /* Remove maximum width */
+    height: 50px; /* Adjusted height for smaller screens */
+  }
+
+  .contact-container {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+}
